@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BS Asesores S.A.S. | Soluciones Contables, Legales y Tributarias</title>
+  <meta name="description" content="BS Asesores S.A.S. - Soluciones integrales para ti y tu empresa en materia contable, legal y tributaria en Envigado, Antioquia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #08090c;
+      --bg-raised: #111318;
+      --bg-surface: #181b22;
+      --border: rgba(255,255,255,0.06);
+      --border-hover: rgba(255,255,255,0.12);
+      --gold: #e8ad1a;
+      --gold-dim: rgba(232,173,26,0.12);
+      --gold-glow: rgba(232,173,26,0.06);
+      --text: #eaeaea;
+      --text-secondary: #8a8f9e;
+      --text-muted: #5c6070;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(8,9,12,0.8);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .logo img {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: #0a0a0a;
+      padding: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--bg);
+      padding: 8px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: opacity 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-cta:hover { opacity: 0.88; }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      margin: 5px 0;
+      border-radius: 1px;
+      transition: 0.25s;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 24px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -100px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, var(--gold-glow) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-text { position: relative; }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 4.8vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+
+    .hero h1 .accent {
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    .btn-gold:hover { opacity: 0.88; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      color: var(--white);
+      border-color: var(--border-hover);
+    }
+
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-logo-block {
+      width: 260px;
+      height: 260px;
+      border-radius: 32px;
+      overflow: hidden;
+      background: #0a0a0a;
+      padding: 48px;
+      border: 1px solid var(--border);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.03),
+        0 40px 80px -20px rgba(0,0,0,0.6),
+        0 0 120px var(--gold-glow);
+    }
+
+    .hero-logo-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px;
+    }
+
+    .trust-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .trust-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.03em;
+    }
+
+    .trust-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 32px;
+      background: var(--border);
+    }
+
+    /* ─── SERVICES ─── */
+    #servicios {
+      padding: 100px 24px;
+    }
+
+    .section-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 64px;
+    }
+
+    .section-tag {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 480px;
+      line-height: 1.65;
+    }
+
+    .services-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .service-main-card {
+      background: var(--bg-raised);
+      padding: 44px 32px;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .service-main-card:hover {
+      background: var(--bg-surface);
+    }
+
+    .service-main-card .s-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--gold-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .service-main-card .s-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-main-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .service-main-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .services-secondary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .service-sm {
+      background: var(--bg-raised);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: background 0.3s;
+    }
+
+    .service-sm:hover { background: var(--bg-surface); }
+
+    .service-sm .s-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+
+    .service-sm span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .service-sm:hover span { color: var(--white); }
+
+    /* ─── ABOUT ─── */
+    #nosotros {
+      padding: 100px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .about-layout {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text .section-desc {
+      margin-bottom: 0;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .about-card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: border-color 0.3s;
+    }
+
+    .about-card:hover {
+      border-color: var(--border-hover);
+    }
+
+    .about-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .about-card h4 svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .about-card p {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      padding-left: 26px;
+    }
+
+    /* ─── CONTACT ─── */
+    #contacto {
+      padding: 100px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-layout {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-left .section-desc {
+      margin-bottom: 40px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--white);
+      background: var(--bg-raised);
+      border-color: var(--border);
+    }
+
+    .contact-link svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-link.wa-fill svg {
+      fill: var(--gold);
+      stroke: none;
+    }
+
+    .contact-form {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .contact-form h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 14px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 90px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--bg);
+      border: none;
+      padding: 13px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      margin-top: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .form-submit:hover { opacity: 0.88; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-left p {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .footer-left .sep {
+      width: 1px;
+      height: 16px;
+      background: var(--border);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 8px;
+    }
+
+    .footer-socials a {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .footer-socials a:hover {
+      color: var(--gold);
+      background: var(--gold-dim);
+    }
+
+    .footer-socials svg { width: 16px; height: 16px; }
+
+    /* ─── WHATSAPP FLOAT ─── */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.35);
+      z-index: 99;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .wa-float:hover { transform: translateY(-2px); }
+    .wa-float svg { width: 26px; height: 26px; fill: #fff; }
+
+    /* ─── ENTRANCE ANIMATIONS ─── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+      }
+
+      .hero-desc { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
+      .hero-tag { justify-content: center; }
+
+      .hero-visual { order: -1; }
+
+      .hero-logo-block {
+        width: 180px;
+        height: 180px;
+        border-radius: 24px;
+      }
+
+      .trust-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px 48px;
+      }
+
+      .trust-divider { display: none; }
+
+      .services-main {
+        grid-template-columns: 1fr;
+        border-radius: 16px;
+      }
+
+      .services-secondary {
+        grid-template-columns: 1fr;
+        border-radius: 16px;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-left {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .footer-left .sep { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0; right: 0;
+        background: rgba(8,9,12,0.96);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        padding: 20px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero { padding: 120px 24px 60px; min-height: auto; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .form-row { grid-template-columns: 1fr; }
+
+      #servicios, #nosotros, #contacto { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <img src="logo.svg" alt="BS Asesores" width="34" height="34">
+        <span>BS Asesores</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/message/EGV6XYA6J3ONH1" target="_blank" class="nav-cta">Escríbenos</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-tag">Envigado, Antioquia</div>
+        <h1>Tu empresa merece<br>asesoría <span class="accent">integral</span></h1>
+        <p class="hero-desc">Profesionales en Derecho y Contaduría Pública con experiencia en materia civil, laboral, tributaria, financiera y contable.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/message/EGV6XYA6J3ONH1" target="_blank" class="btn btn-gold">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agenda tu consulta
+          </a>
+          <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-block">
+          <img src="logo.svg" alt="BS Asesores Logo" width="260" height="260">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <span class="trust-number">+4</span>
+        <span class="trust-label">Años de<br>experiencia</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-number">NIT</span>
+        <span class="trust-label">901519297-8<br>Cámara de Comercio</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-number">3</span>
+        <span class="trust-label">Áreas de<br>especialización</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-number">100%</span>
+        <span class="trust-label">Compromiso<br>con tu empresa</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="servicios">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag">Servicios</div>
+        <h2 class="section-title">Lo que hacemos</h2>
+        <p class="section-desc">Acompañamiento integral para personas naturales y jurídicas en las áreas más críticas de su operación.</p>
+      </div>
+
+      <div class="services-main fade-in">
+        <div class="service-main-card">
+          <div class="s-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Asesoría Legal</h3>
+          <p>Representación ante autoridades judiciales y administrativas. Asesoramiento jurídico en materia civil, laboral y comercial.</p>
+        </div>
+        <div class="service-main-card">
+          <div class="s-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Contabilidad</h3>
+          <p>Gestión contable integral, estados financieros, reportes NIIF y acompañamiento permanente para tus finanzas.</p>
+        </div>
+        <div class="service-main-card">
+          <div class="s-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Asesoría Tributaria</h3>
+          <p>Planeación tributaria, declaraciones de renta, IVA, retención en la fuente e impuestos municipales.</p>
+        </div>
+      </div>
+
+      <div class="services-secondary fade-in">
+        <div class="service-sm">
+          <span class="s-dot"></span>
+          <span>Asesoría Laboral</span>
+        </div>
+        <div class="service-sm">
+          <span class="s-dot"></span>
+          <span>Consultoría Financiera</span>
+        </div>
+        <div class="service-sm">
+          <span class="s-dot"></span>
+          <span>Creación de Empresa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="nosotros">
+    <div class="about-layout">
+      <div class="about-text fade-in">
+        <div class="section-tag">Nosotros</div>
+        <h2 class="section-title">Tu mejor aliado</h2>
+        <p class="section-desc">Somos Builes Serna Asesores S.A.S., una firma con sede en Envigado, Antioquia. Desde 2021 acompañamos personas y empresas con profesionales altamente calificados en Derecho y Contaduría Pública, con amplia experiencia en materia civil, laboral, tributaria, financiera y contable.</p>
+      </div>
+      <div class="about-right fade-in">
+        <div class="about-card">
+          <h4>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Confianza
+          </h4>
+          <p>Transparencia y ética profesional como base de cada servicio que prestamos.</p>
+        </div>
+        <div class="about-card">
+          <h4>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Oportunidad
+          </h4>
+          <p>Respuestas ágiles con soluciones que llegan cuando las necesitas.</p>
+        </div>
+        <div class="about-card">
+          <h4>
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Cercanía
+          </h4>
+          <p>Acompañamiento personalizado para que nunca te sientas solo en el proceso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto">
+    <div class="contact-layout">
+      <div class="contact-left fade-in">
+        <div class="section-tag">Contacto</div>
+        <h2 class="section-title">Hablemos</h2>
+        <p class="section-desc">Escríbenos y agenda una consulta sin compromiso.</p>
+
+        <div class="contact-links">
+          <a href="tel:+573156786518" class="contact-link">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            315 678 6518
+          </a>
+          <a href="mailto:contacto@bs-asesores.co" class="contact-link">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@bs-asesores.co
+          </a>
+          <a href="https://wa.me/message/EGV6XYA6J3ONH1" target="_blank" class="contact-link wa-fill">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp directo
+          </a>
+          <a href="https://www.instagram.com/asesores_bs/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @asesores_bs
+          </a>
+          <a href="#" class="contact-link" style="pointer-events:none;cursor:default;">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            CR 37 No. 46F Sur 101, Envigado
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
+        <h3>Solicita tu consulta</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="300 123 4567">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+        </div>
+        <div class="form-group">
+          <label for="service">Servicio de interés</label>
+          <select id="service" name="service">
+            <option value="">Selecciona un servicio</option>
+            <option value="legal">Asesoría Legal</option>
+            <option value="contable">Contabilidad</option>
+            <option value="tributaria">Asesoría Tributaria</option>
+            <option value="laboral">Asesoría Laboral</option>
+            <option value="financiera">Consultoría Financiera</option>
+            <option value="creacion">Creación de Empresa</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="¿En qué podemos ayudarte?"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#" class="logo">
+          <img src="logo.svg" alt="BS Asesores" width="28" height="28">
+          <span>BS Asesores</span>
+        </a>
+        <div class="sep"></div>
+        <p>Builes Serna Asesores S.A.S. &middot; NIT 901519297-8 &middot; Envigado, Antioquia</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/asesores_bs/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/message/EGV6XYA6J3ONH1" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="mailto:contacto@bs-asesores.co" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/message/EGV6XYA6J3ONH1" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // Mobile menu
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('#navLinks a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // Scroll-triggered fade-in
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // Form → WhatsApp
+    function handleSubmit(e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value;
+      var phone = document.getElementById('phone').value;
+      var email = document.getElementById('email').value;
+      var service = document.getElementById('service').value;
+      var message = document.getElementById('message').value;
+
+      var text = 'Hola, soy ' + name + '.';
+      if (phone) text += '\nTeléfono: ' + phone;
+      if (email) text += '\nCorreo: ' + email;
+      if (service) text += '\nServicio de interés: ' + service;
+      if (message) text += '\n\n' + message;
+
+      window.open('https://wa.me/573156786518?text=' + encodeURIComponent(text), '_blank');
+    }
+  </script>
+
+</body>
+</html>

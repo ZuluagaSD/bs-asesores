@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top-left: white rounded square -->
+  <rect x="0" y="0" width="46" height="46" rx="10" fill="#ffffff"/>
+  <!-- Top-right: gold teardrop (sharp inner corner) -->
+  <path d="M54,0 Q100,0 100,23 Q100,46 77,46 Q54,46 54,23 Z" fill="#e8ad1a"/>
+  <!-- Bottom-left: white rounded square -->
+  <rect x="0" y="54" width="46" height="46" rx="10" fill="#ffffff"/>
+  <!-- Bottom-right: white circle -->
+  <ellipse cx="77" cy="77" rx="23" ry="23" fill="#ffffff"/>
+</svg>
