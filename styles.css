@@ -595,13 +595,11 @@ footer {
 
 .hero-logo-block {
   width: 260px;
-  height: 260px;
 }
 
 .hero-logo-block img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 /* ─── TRUST BAR ─── */
@@ -1019,7 +1017,6 @@ footer {
 
   .hero-logo-block {
     width: 180px;
-    height: 180px;
   }
 
   .trust-inner {
