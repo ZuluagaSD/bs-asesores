@@ -8,6 +8,8 @@
   <meta name="keywords" content="asesoría contable Antioquia, asesoría legal Antioquia, asesoría tributaria Antioquia, contador público Medellín, abogado laboral Antioquia, planeación tributaria Colombia, outsourcing contable Antioquia, consultoría financiera empresas Medellín, registro mercantil Antioquia, outsourcing nómina Antioquia">
   <meta name="author" content="BS Asesores S.A.S.">
   <meta name="robots" content="index, follow">
+  <!-- Google Search Console Verification — replace YOUR_VERIFICATION_CODE with your actual code from search.google.com/search-console -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
   <link rel="canonical" href="https://bs-asesores.co/">
   <link rel="alternate" hreflang="es-CO" href="https://bs-asesores.co/">
   <link rel="alternate" hreflang="es" href="https://bs-asesores.co/">
@@ -24,7 +26,7 @@
   <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BS Asesores S.A.S. | Asesoría Contable, Legal y Tributaria">
   <meta name="twitter:description" content="Soluciones integrales en materia contable, legal y tributaria para tu empresa en Antioquia, Colombia.">
   <meta name="twitter:image" content="https://bs-asesores.co/og-image.png">
@@ -43,827 +45,17 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#08090c">
 
+  <link rel="dns-prefetch" href="https://wa.me">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --bg: #08090c;
-      --bg-raised: #111318;
-      --bg-surface: #181b22;
-      --border: rgba(255,255,255,0.06);
-      --border-hover: rgba(255,255,255,0.12);
-      --gold: #e8ad1a;
-      --gold-dim: rgba(232,173,26,0.12);
-      --gold-glow: rgba(232,173,26,0.06);
-      --text: #eaeaea;
-      --text-secondary: #8a8f9e;
-      --text-muted: #5c6070;
-      --white: #ffffff;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* ─── NAV ─── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(8,9,12,0.8);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: -0.01em;
-    }
-
-    .logo img {
-      width: 34px;
-      height: 34px;
-      border-radius: 8px;
-      object-fit: cover;
-      background: #0a0a0a;
-      padding: 5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      letter-spacing: -0.01em;
-    }
-
-    .nav-links a:hover { color: var(--white); }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--bg);
-      padding: 8px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.875rem;
-      transition: opacity 0.2s;
-      cursor: pointer;
-    }
-
-    .nav-cta:hover { opacity: 0.88; }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--text);
-      margin: 5px 0;
-      border-radius: 1px;
-      transition: 0.25s;
-    }
-
-    /* ─── HERO ─── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 140px 24px 100px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -200px;
-      right: -100px;
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(circle, var(--gold-glow) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .hero-text { position: relative; }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--gold);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-
-    .hero-tag::before {
-      content: '';
-      width: 20px;
-      height: 1px;
-      background: var(--gold);
-    }
-
-    .hero h1 {
-      font-size: clamp(2.4rem, 4.8vw, 3.6rem);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
-      color: var(--white);
-    }
-
-    .hero h1 .accent {
-      color: var(--gold);
-    }
-
-    .hero-desc {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      max-width: 480px;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.2s;
-      cursor: pointer;
-      border: none;
-      letter-spacing: -0.01em;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--bg);
-    }
-
-    .btn-gold:hover { opacity: 0.88; }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--text-secondary);
-      border: 1px solid var(--border);
-    }
-
-    .btn-ghost:hover {
-      color: var(--white);
-      border-color: var(--border-hover);
-    }
-
-    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-logo-block {
-      width: 260px;
-      height: 260px;
-      border-radius: 32px;
-      overflow: hidden;
-      background: #0a0a0a;
-      padding: 48px;
-      border: 1px solid var(--border);
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.03),
-        0 40px 80px -20px rgba(0,0,0,0.6),
-        0 0 120px var(--gold-glow);
-    }
-
-    .hero-logo-block img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* ─── TRUST BAR ─── */
-    .trust-bar {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 40px 24px;
-    }
-
-    .trust-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-    }
-
-    .trust-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.03em;
-    }
-
-    .trust-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-    }
-
-    .trust-divider {
-      width: 1px;
-      height: 32px;
-      background: var(--border);
-    }
-
-    /* ─── SERVICES ─── */
-    #servicios {
-      padding: 100px 24px;
-    }
-
-    .section-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      margin-bottom: 64px;
-    }
-
-    .section-tag {
-      color: var(--gold);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-
-    .section-desc {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      max-width: 480px;
-      line-height: 1.65;
-    }
-
-    .services-main {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
-
-    .service-main-card {
-      background: var(--bg-raised);
-      padding: 44px 32px;
-      position: relative;
-      transition: background 0.3s;
-    }
-
-    .service-main-card:hover {
-      background: var(--bg-surface);
-    }
-
-    .service-main-card .s-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--gold-dim);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    .service-main-card .s-icon svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .service-main-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 10px;
-      letter-spacing: -0.01em;
-    }
-
-    .service-main-card p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.65;
-    }
-
-    .services-secondary {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .service-sm {
-      background: var(--bg-raised);
-      padding: 28px 32px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      transition: background 0.3s;
-    }
-
-    .service-sm:hover { background: var(--bg-surface); }
-
-    .service-sm .s-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
-      opacity: 0.5;
-    }
-
-    .service-sm span {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-
-    .service-sm:hover span { color: var(--white); }
-
-    /* ─── ABOUT ─── */
-    #nosotros {
-      padding: 100px 24px;
-      border-top: 1px solid var(--border);
-    }
-
-    .about-layout {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .about-text .section-desc {
-      margin-bottom: 0;
-    }
-
-    .about-right {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .about-card {
-      background: var(--bg-raised);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      transition: border-color 0.3s;
-    }
-
-    .about-card:hover {
-      border-color: var(--border-hover);
-    }
-
-    .about-card h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .about-card h4 svg {
-      width: 16px;
-      height: 16px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .about-card p {
-      color: var(--text-secondary);
-      font-size: 0.88rem;
-      line-height: 1.6;
-      padding-left: 26px;
-    }
-
-    /* ─── CONTACT ─── */
-    #contacto {
-      padding: 100px 24px;
-      border-top: 1px solid var(--border);
-    }
-
-    .contact-layout {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-    }
-
-    .contact-left .section-desc {
-      margin-bottom: 40px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      transition: color 0.2s;
-      padding: 12px 16px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      transition: all 0.2s;
-    }
-
-    .contact-link:hover {
-      color: var(--white);
-      background: var(--bg-raised);
-      border-color: var(--border);
-    }
-
-    .contact-link svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .contact-link.wa-fill svg {
-      fill: var(--gold);
-      stroke: none;
-    }
-
-    .contact-form {
-      background: var(--bg-raised);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 40px;
-    }
-
-    .contact-form h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 28px;
-      letter-spacing: -0.01em;
-    }
-
-    .form-group { margin-bottom: 16px; }
-
-    .form-group label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 11px 14px;
-      color: var(--text);
-      font-family: inherit;
-      font-size: 0.9rem;
-      transition: border-color 0.2s;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: var(--text-muted);
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-
-    .form-group textarea { resize: vertical; min-height: 90px; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .form-submit {
-      width: 100%;
-      background: var(--gold);
-      color: var(--bg);
-      border: none;
-      padding: 13px;
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: opacity 0.2s;
-      margin-top: 8px;
-      letter-spacing: -0.01em;
-    }
-
-    .form-submit:hover { opacity: 0.88; }
-
-    /* ─── FOOTER ─── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 40px 24px;
-    }
-
-    .footer-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .footer-left p {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    .footer-left .sep {
-      width: 1px;
-      height: 16px;
-      background: var(--border);
-    }
-
-    .footer-socials {
-      display: flex;
-      gap: 8px;
-    }
-
-    .footer-socials a {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s, background 0.2s;
-    }
-
-    .footer-socials a:hover {
-      color: var(--gold);
-      background: var(--gold-dim);
-    }
-
-    .footer-socials svg { width: 16px; height: 16px; }
-
-    /* ─── WHATSAPP FLOAT ─── */
-    .wa-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 56px;
-      height: 56px;
-      background: #25D366;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 32px rgba(37,211,102,0.35);
-      z-index: 99;
-      transition: transform 0.2s;
-      cursor: pointer;
-    }
-
-    .wa-float:hover { transform: translateY(-2px); }
-    .wa-float svg { width: 26px; height: 26px; fill: #fff; }
-
-    /* ─── ENTRANCE ANIMATIONS ─── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-        text-align: center;
-      }
-
-      .hero-desc { margin-left: auto; margin-right: auto; }
-      .hero-actions { justify-content: center; }
-      .hero-tag { justify-content: center; }
-
-      .hero-visual { order: -1; }
-
-      .hero-logo-block {
-        width: 180px;
-        height: 180px;
-        border-radius: 24px;
-      }
-
-      .trust-inner {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px 48px;
-      }
-
-      .trust-divider { display: none; }
-
-      .services-main {
-        grid-template-columns: 1fr;
-        border-radius: 16px;
-      }
-
-      .services-secondary {
-        grid-template-columns: 1fr;
-        border-radius: 16px;
-      }
-
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .contact-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-left {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .footer-left .sep { display: none; }
-    }
-
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
-      .menu-toggle { display: block; }
-
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0; right: 0;
-        background: rgba(8,9,12,0.96);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        padding: 20px 24px;
-        gap: 16px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .hero { padding: 120px 24px 60px; min-height: auto; }
-      .hero-actions { flex-direction: column; width: 100%; }
-      .hero-actions .btn { width: 100%; justify-content: center; }
-      .form-row { grid-template-columns: 1fr; }
-
-      #servicios, #nosotros, #contacto { padding: 60px 24px; }
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": "https://bs-asesores.co/#organization",
     "name": "BS Asesores S.A.S.",
     "alternateName": "Builes Serna Asesores S.A.S.",
@@ -873,6 +65,9 @@
     "image": "https://bs-asesores.co/og-image.png",
     "telephone": "+573156786518",
     "email": "contacto@bs-asesores.co",
+    "foundingDate": "2021",
+    "taxID": "901519297-8",
+    "knowsLanguage": "es",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "CR 37 No. 46F Sur 101",
@@ -980,6 +175,120 @@
     "inLanguage": "es-CO"
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué servicios ofrece BS Asesores S.A.S.?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BS Asesores S.A.S. ofrece servicios integrales de asesoría contable, legal y tributaria para empresas y personas naturales en Antioquia. Nuestros servicios principales incluyen: asesoría legal, asesoría contable y tributaria, asesoría financiera, outsourcing de nómina, registro mercantil ante la Cámara de Comercio y consultoría permanente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde queda BS Asesores y a qué ciudades prestan servicio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nuestra sede principal está ubicada en Envigado, Antioquia, en la dirección CR 37 No. 46F Sur 101. Atendemos clientes en todo el Área Metropolitana del Valle de Aburrá, incluyendo Medellín, Envigado, Itagüí, Sabaneta, Bello, Copacabana y demás municipios de Antioquia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cobra un contador público en Medellín?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El costo de un contador público en Medellín varía según el tipo de servicio, la complejidad de la contabilidad y el tamaño de la empresa. En BS Asesores ofrecemos planes de outsourcing contable adaptados a las necesidades de cada cliente. Contáctenos para una consulta sin compromiso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es el outsourcing contable y por qué conviene?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El outsourcing contable es la tercerización de los servicios de contabilidad de su empresa a una firma especializada. Las principales ventajas son: reducción de costos laborales, acceso a un equipo multidisciplinario, cumplimiento oportuno de obligaciones ante la DIAN, y estados financieros precisos bajo estándares internacionales NIIF."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo puedo declarar renta en Colombia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La declaración de renta en Colombia se presenta ante la DIAN según el calendario tributario establecido cada año. El proceso incluye: recopilar certificados de ingresos y retenciones, calcular la renta líquida gravable, aplicar las tarifas vigentes, y presentar electrónicamente. En BS Asesores le ayudamos con todo el proceso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es la planeación tributaria y cómo me beneficia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La planeación tributaria es una estrategia legal que permite optimizar la carga impositiva aprovechando beneficios, deducciones y exenciones de la ley colombiana. Los beneficios incluyen: reducción legal de impuestos, mejor flujo de caja, prevención de sanciones y aprovechamiento de incentivos fiscales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuáles son los requisitos para crear una empresa en Colombia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para crear una empresa en Colombia, especialmente una SAS, los requisitos principales son: documento de identidad de los socios, definir nombre y objeto social, elaborar estatutos sociales, registrar ante la Cámara de Comercio, obtener el NIT ante la DIAN, inscribir libros contables y abrir cuenta bancaria empresarial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia entre persona natural y persona jurídica en Colombia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Una persona natural ejerce actividades comerciales a título personal, respondiendo con su patrimonio. Una persona jurídica es una entidad creada legalmente con patrimonio propio separado de sus socios. Las diferencias incluyen: responsabilidad patrimonial, regímenes tributarios, obligaciones contables y capacidad de contratar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona el outsourcing de nómina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El outsourcing de nómina consiste en delegar la gestión integral de la nómina a una firma especializada. Incluye: cálculo de salarios, prestaciones sociales, aportes a seguridad social y parafiscales, retención en la fuente, elaboración de desprendibles de pago y reportes contables."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuáles son las fechas del calendario tributario DIAN 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El calendario tributario de la DIAN para 2026 establece los plazos para la presentación de declaraciones de impuestos. Las fechas varían según el último dígito del NIT y el tipo de declaración. En BS Asesores le ayudamos a identificar sus obligaciones y cumplir con todos los plazos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Por qué necesito un abogado laboral en Medellín?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un abogado laboral es fundamental para garantizar el cumplimiento de la normatividad laboral colombiana. Los servicios incluyen: elaboración de contratos laborales, asesoría en despidos y liquidaciones, representación en procesos judiciales, manejo de seguridad social y resolución de conflictos laborales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo puedo actualizar mi registro mercantil en la Cámara de Comercio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La actualización del registro mercantil es una obligación anual para todas las empresas en Colombia. Incluye: renovación de matrícula mercantil en los tres primeros meses del año, actualización de información financiera y registro de cambios en la empresa. En BS Asesores le asistimos con todo el proceso."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your actual GA4 Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
 
@@ -994,6 +303,7 @@
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
       </ul>
       <a href="https://wa.me/message/EGV6XYA6J3ONH1" target="_blank" class="nav-cta">Escríbenos</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
@@ -1019,7 +329,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-logo-block">
-          <img src="logo-full.svg" alt="BS Asesores Logo" width="260" height="260">
+          <img src="logo-full.svg" alt="BS Asesores Logo" width="260" height="260" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -1064,37 +374,46 @@
           <div class="s-icon">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>Asesoría Legal</h3>
-          <p>Elaboración y revisión de contratos. Representación judicial en litigios civiles, laborales y comerciales. Derecho laboral, seguridad social y gestión de cobro cartera.</p>
+          <h3><a href="/servicios/asesoria-legal">Asesoría Legal</a></h3>
+          <p>Elaboración y revisión de contratos comerciales, civiles y laborales para empresas en Medellín y Antioquia. Representación judicial en litigios civiles, laborales y comerciales. Asesoría en derecho laboral, seguridad social, cobro de cartera y asuntos corporativos para personas naturales y jurídicas.</p>
         </div>
         <div class="service-main-card">
           <div class="s-icon">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3>Asesoría Contable y Tributaria</h3>
-          <p>Outsourcing contable y tributario. Estados financieros bajo estándares internacionales. Planeación tributaria, liquidación de impuestos nacionales y territoriales.</p>
+          <h3><a href="/servicios/asesoria-contable">Asesoría Contable y Tributaria</a></h3>
+          <p>Tercerización de servicios contables y tributarios para empresas en Medellín, Envigado y Antioquia. Preparación de estados financieros bajo estándares internacionales NIIF. Planeación tributaria estratégica, liquidación y presentación de impuestos nacionales y territoriales ante la DIAN.</p>
         </div>
         <div class="service-main-card">
           <div class="s-icon">
             <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h3>Asesoría Financiera</h3>
-          <p>Valoración de empresas y proyectos. Planeación financiera y estrategias de coberturas y derivados para minimizar riesgo por fluctuaciones cambiarias.</p>
+          <h3><a href="/servicios/asesoria-financiera">Asesoría Financiera</a></h3>
+          <p>Valoración de empresas y proyectos de inversión en Colombia. Planeación financiera corporativa, estrategias de coberturas cambiarias y derivados financieros para minimizar riesgos. Consultoría financiera especializada para pymes y grandes empresas en Antioquia.</p>
         </div>
       </div>
 
       <div class="services-secondary fade-in">
         <div class="service-sm">
           <span class="s-dot"></span>
-          <span>Outsourcing de Nómina</span>
+          <div>
+            <a href="/servicios/outsourcing-nomina">Outsourcing de Nómina</a>
+            <p class="service-sm-desc">Gestión integral de nómina, liquidación de prestaciones sociales y parafiscales para empresas en Colombia.</p>
+          </div>
         </div>
         <div class="service-sm">
           <span class="s-dot"></span>
-          <span>Registro Mercantil</span>
+          <div>
+            <a href="/servicios/registro-mercantil">Registro Mercantil</a>
+            <p class="service-sm-desc">Registro, renovación y actualización mercantil ante la Cámara de Comercio. Constitución de sociedades SAS y otros tipos societarios.</p>
+          </div>
         </div>
         <div class="service-sm">
           <span class="s-dot"></span>
-          <span>Consultoría Permanente</span>
+          <div>
+            <a href="/#contacto">Consultoría Permanente</a>
+            <p class="service-sm-desc">Acompañamiento continuo en asuntos legales, contables y tributarios para su empresa en Medellín y Antioquia.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1107,6 +426,7 @@
         <div class="section-tag">Nosotros</div>
         <h2 class="section-title">Firma de asesores contables y legales en Antioquia</h2>
         <p class="section-desc">BS Asesores S.A.S. es una firma colombiana de asesoría legal, contable y tributaria con sede en Envigado, al servicio de empresas y personas naturales en todo Antioquia. Ofrecemos soluciones integrales que trascienden el cumplimiento regulatorio con un apoyo sólido y confiable que les ayude al logro de sus objetivos.</p>
+        <p class="section-desc" style="margin-top:12px;">Atendemos clientes en todo el Área Metropolitana del Valle de Aburrá, incluyendo Medellín, Envigado, Itagüí, Sabaneta, Bello, Copacabana y demás municipios de Antioquia. Nuestro equipo de contadores públicos y abogados está comprometido con brindar asesoría personalizada y de calidad.</p>
       </div>
       <div class="about-right fade-in">
         <div class="about-card">
@@ -1130,6 +450,106 @@
           </h4>
           <p>Acompañamiento eventual y permanente en asuntos legales, contables y tributarios para su empresa.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="preguntas">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag">Preguntas Frecuentes</div>
+        <h2 class="section-title">Resolvemos tus dudas sobre asesoría contable, legal y tributaria</h2>
+        <p class="section-desc">Encuentra respuestas a las preguntas más comunes sobre nuestros servicios en Antioquia.</p>
+      </div>
+
+      <div class="faq-list fade-in">
+        <details class="faq-item">
+          <summary>¿Qué servicios ofrece BS Asesores S.A.S.?</summary>
+          <div class="faq-answer">
+            <p>BS Asesores S.A.S. ofrece servicios integrales de asesoría contable, legal y tributaria para empresas y personas naturales en Antioquia. Nuestros servicios principales incluyen: <a href="/servicios/asesoria-legal">asesoría legal</a> (contratos, litigios civiles, laborales y comerciales, derecho laboral y seguridad social), <a href="/servicios/asesoria-contable">asesoría contable y tributaria</a> (outsourcing contable, estados financieros bajo NIIF, planeación tributaria, liquidación de impuestos ante la DIAN), <a href="/servicios/asesoria-financiera">asesoría financiera</a> (valoración de empresas, planeación financiera, coberturas cambiarias), <a href="/servicios/outsourcing-nomina">outsourcing de nómina</a>, <a href="/servicios/registro-mercantil">registro mercantil</a> ante la Cámara de Comercio y consultoría permanente.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Dónde queda BS Asesores y a qué ciudades prestan servicio?</summary>
+          <div class="faq-answer">
+            <p>Nuestra sede principal está ubicada en <a href="/envigado">Envigado, Antioquia</a>, en la dirección CR 37 No. 46F Sur 101. Atendemos clientes en todo el Área Metropolitana del Valle de Aburrá, incluyendo <a href="/medellin">Medellín</a>, Envigado, Itagüí, Sabaneta, Bello, Copacabana y demás municipios de Antioquia. También brindamos asesoría a empresas en todo el territorio colombiano de manera virtual. Nuestro horario de atención es de lunes a viernes de 8:00 a.m. a 6:00 p.m.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuánto cobra un contador público en Medellín?</summary>
+          <div class="faq-answer">
+            <p>El costo de un contador público en Medellín varía según el tipo de servicio, la complejidad de la contabilidad y el tamaño de la empresa. En BS Asesores ofrecemos planes de <a href="/servicios/asesoria-contable">outsourcing contable</a> adaptados a las necesidades de cada cliente, desde pequeñas empresas hasta grandes compañías. Le invitamos a <a href="#contacto">contactarnos</a> para una consulta sin compromiso donde evaluamos su situación particular y le presentamos una propuesta ajustada a su presupuesto y necesidades contables y tributarias.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué es el outsourcing contable y por qué conviene?</summary>
+          <div class="faq-answer">
+            <p>El outsourcing contable es la tercerización de los servicios de contabilidad de su empresa a una firma especializada como BS Asesores. En lugar de contratar un contador interno, usted obtiene un equipo completo de profesionales contables y tributarios. Las principales ventajas son: reducción de costos laborales, acceso a un equipo multidisciplinario de contadores públicos certificados, cumplimiento oportuno de obligaciones ante la DIAN, estados financieros precisos bajo estándares internacionales NIIF, y la tranquilidad de tener su contabilidad al día. Conozca más sobre nuestro servicio de <a href="/servicios/asesoria-contable">asesoría contable</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo puedo declarar renta en Colombia?</summary>
+          <div class="faq-answer">
+            <p>La declaración de renta en Colombia se presenta ante la DIAN según el calendario tributario establecido cada año. Tanto personas naturales como jurídicas deben verificar si están obligadas a declarar según sus ingresos, patrimonio y otros criterios. El proceso incluye: recopilar certificados de ingresos, retenciones y patrimonio; calcular la renta líquida gravable; aplicar las tarifas vigentes; y presentar electrónicamente ante la DIAN. En BS Asesores le ayudamos con todo el proceso de declaración de renta, <a href="/servicios/asesoria-tributaria">planeación tributaria</a> y optimización fiscal legal en Medellín y Antioquia.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué es la planeación tributaria y cómo me beneficia?</summary>
+          <div class="faq-answer">
+            <p>La planeación tributaria es una estrategia legal que permite a empresas y personas naturales optimizar su carga impositiva aprovechando los beneficios, deducciones y exenciones que establece la ley colombiana. No se trata de evadir impuestos sino de planificar inteligentemente para pagar lo justo. Los beneficios incluyen: reducción legal de la carga tributaria, mejor flujo de caja, prevención de sanciones por incumplimiento, y aprovechamiento de incentivos fiscales. Nuestros <a href="/servicios/asesoria-tributaria">asesores tributarios en Medellín</a> le ayudan a diseñar una estrategia fiscal personalizada.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuáles son los requisitos para crear una empresa en Colombia?</summary>
+          <div class="faq-answer">
+            <p>Para crear una empresa en Colombia, especialmente una SAS (Sociedad por Acciones Simplificada), los requisitos principales son: documento de identidad de los socios, definir el nombre y objeto social de la empresa, elaborar los estatutos sociales, registrar la empresa ante la Cámara de Comercio, obtener el NIT ante la DIAN, inscribir los libros contables y abrir una cuenta bancaria empresarial. En BS Asesores le acompañamos en todo el proceso de <a href="/servicios/registro-mercantil">registro mercantil</a> y constitución de su empresa en Envigado, Medellín y Antioquia.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuál es la diferencia entre persona natural y persona jurídica en Colombia?</summary>
+          <div class="faq-answer">
+            <p>Una persona natural es un individuo que ejerce actividades comerciales a título personal, respondiendo con su patrimonio personal. Una persona jurídica es una entidad creada legalmente (como una SAS, LTDA o SA) que tiene patrimonio propio separado del de sus socios. Las principales diferencias son: la responsabilidad patrimonial (limitada en persona jurídica), los regímenes tributarios aplicables, las obligaciones contables y la capacidad de contratar. En BS Asesores le asesoramos sobre cuál estructura es más conveniente para su negocio en Antioquia.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo funciona el outsourcing de nómina?</summary>
+          <div class="faq-answer">
+            <p>El outsourcing de nómina consiste en delegar la gestión integral de la nómina de su empresa a una firma especializada. En BS Asesores nos encargamos de: cálculo y liquidación de salarios, prestaciones sociales (prima, cesantías, vacaciones), aportes a seguridad social y parafiscales (salud, pensión, ARL, caja de compensación), retención en la fuente sobre salarios, elaboración de desprendibles de pago y reportes para la contabilidad. Conozca más sobre nuestro servicio de <a href="/servicios/outsourcing-nomina">outsourcing de nómina</a> en Medellín y Antioquia.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuáles son las fechas del calendario tributario DIAN 2026?</summary>
+          <div class="faq-answer">
+            <p>El calendario tributario de la DIAN para 2026 establece los plazos para la presentación de las diferentes declaraciones de impuestos en Colombia. Las fechas varían según el último dígito del NIT y el tipo de declaración (renta, IVA, retención en la fuente, ICA, entre otros). En BS Asesores le ayudamos a identificar sus obligaciones tributarias específicas y a cumplir con todos los plazos establecidos por la DIAN para evitar sanciones e intereses moratorios. <a href="#contacto">Contáctenos</a> para una revisión de su <a href="/servicios/asesoria-tributaria">calendario fiscal personalizado</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Por qué necesito un abogado laboral en Medellín?</summary>
+          <div class="faq-answer">
+            <p>Un abogado laboral en Medellín es fundamental para proteger los intereses de su empresa y garantizar el cumplimiento de la normatividad laboral colombiana. Los principales servicios que ofrecemos incluyen: elaboración y revisión de contratos laborales, asesoría en despidos y liquidaciones, representación en procesos judiciales ante juzgados laborales, manejo de seguridad social, resolución de conflictos laborales y asesoría en reglamento interno de trabajo. Contar con <a href="/servicios/asesoria-legal">asesoría legal preventiva</a> evita costosos litigios y sanciones del Ministerio de Trabajo.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo puedo actualizar mi registro mercantil en la Cámara de Comercio?</summary>
+          <div class="faq-answer">
+            <p>La actualización del registro mercantil ante la Cámara de Comercio es una obligación anual para todas las empresas en Colombia. El proceso incluye: renovación de la matrícula mercantil (durante los tres primeros meses del año), actualización de información financiera, y registro de cualquier cambio en la empresa (dirección, actividad económica, socios, capital). En BS Asesores le asistimos con todo el proceso de <a href="/servicios/registro-mercantil">registro mercantil</a> en <a href="/envigado">Envigado</a> y Antioquia, asegurando que su empresa cumpla con todas las obligaciones legales vigentes.</p>
+          </div>
+        </details>
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <a href="/preguntas-frecuentes" class="btn btn-ghost">Ver todas las preguntas frecuentes</a>
       </div>
     </div>
   </section>
@@ -1222,6 +642,19 @@
         <a href="mailto:contacto@bs-asesores.co" aria-label="Email">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </a>
+      </div>
+    </div>
+    <div class="footer-inner" style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+      <div class="footer-links">
+        <a href="/servicios/asesoria-legal">Asesoría Legal</a>
+        <a href="/servicios/asesoria-contable">Asesoría Contable</a>
+        <a href="/servicios/asesoria-tributaria">Asesoría Tributaria</a>
+        <a href="/servicios/asesoria-financiera">Asesoría Financiera</a>
+        <a href="/servicios/outsourcing-nomina">Outsourcing Nómina</a>
+        <a href="/servicios/registro-mercantil">Registro Mercantil</a>
+        <a href="/medellin">Medellín</a>
+        <a href="/envigado">Envigado</a>
+        <a href="/preguntas-frecuentes">Preguntas Frecuentes</a>
       </div>
     </div>
   </footer>
